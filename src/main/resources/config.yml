@@ -1,0 +1,136 @@
+# ----------------------------------
+# -
+#       ExecutableItems
+# -
+#         By: Ssomar
+# -
+# ----------------------------------
+# -
+# -
+# -
+# follow the examples below to create new Executable Item
+# Players will need permission "ei.item.<ID>" to use items in-game (ex: ei.item.fly)
+# -
+# WIKI HERE : https://github.com/ssomar1607/ExecutableItems/wiki
+# DISCORD HERE : https://discord.com/invite/7n8wHXu
+# material ID : https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# particle ID: https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Particle.html
+# head VALUE: https://minecraft-heads.com/custom-heads
+# -
+# EN / FR / ES / HU
+locale: EN
+items:
+  test:
+    name: "&e&lItem test"
+    lore: 
+     - "&6&llore test"
+     - "&7&llore test"
+    material: DIAMOND
+    glow: true # item glow like enchant item
+    cooldown: 30  # in seconds
+    click: all  # left | right | all | consume
+    sneaking: false # true | false
+    cancel-item-drop: false #(by default all item cant be drop, so set false if you want your players can drop the item)
+    give-first-join: true #(by default its false so set true if you want give this item to your new players)
+    give-slot: 1 #(1-9 or 0 = first slot empty)
+    enchant:
+      KNOCKBACK:
+        level: 2
+    usage: 5
+    commands:
+     - "/give %player% diamond 1" #RUN BY CONSOLE
+     - "SENDMESSAGE &a&lGood job %player% you have received a diamond !"
+     - "DELAY 5"
+     - "SUDOOP gamemode creative " #RUN BY PLAYER EVEN IF DOESNT HAVE THE PERMISSION
+     - "SENDMESSAGE &a&lYou are in creative !"
+     - "DELAY 5"
+     - "SUDO help" #RUN BY PLAYER BUT HE NEEDS THE PERMISSION
+     - "SENDMESSAGE &a&lYou have open help menu !"
+     - "RANDOM RUN: 1"
+     - "SENDMESSAGE &6&lHEHEHE !"
+     - "kill %player%"
+     - "SENDMESSAGE &7&lNOTHING !"
+     - "effect give %player% strenght 30 2"
+     - "RANDOM END"
+
+  fly:
+    name: "&e&lFly"
+    lore: 
+     - "&6&lClick"
+     - "&7&lto active fly (10 min)"
+    material: FEATHER
+    glow: true
+    cooldown: 600
+    click: all
+    sneaking: false
+    commands:
+     - "FLY ON"
+     - "ACTIONBAR ON"
+     - "PARTICLE type: 'DRAGON_BREATH' quantity: '500' offset: '3' speed: '0.2'"
+     - "SENDMESSAGE &a&l[ExecutableItems] &eYou can fly !"
+     - "DELAY 570"
+     - "SENDMESSAGE &a&l[ExecutableItems] &eYour fly will be disable in 30 sec"
+     - "DELAY 30"
+     - "FLY OFF"
+     - "ACTIONBAR OFF"
+     - "PARTICLE type: 'DRAGON_BREATH' quantity: '500' offset: '3' speed: '0.2'"
+  
+  heal:
+    name: "&e&lHealer"
+    lore: 
+     - "&6&lClick"
+     - "&7&lto active the MEGA HEAL"
+    material: POTION
+    glow: true
+    cooldown: 10
+    click: consume
+    sneaking: false
+    commands:
+     - "SENDMESSAGE &a&l[ExecutableItems] &cMEGA HEAL !"
+     - "/heal %player%"
+
+  epicsnowball:
+    name: "&5&lEPICSNOWBALL"
+    lore: 
+     - "&d&lYou have to target a player"
+     - "&5&lAND CLIIIICK"
+     - "&7Slow your enemy during 30 sec"
+    material: SNOWBALL
+    glow: true
+    cooldown: 10
+    click: projectile
+    sneaking: false
+    commands:
+     - "SENDMESSAGE &e&l[ExecutableItems] &6You are slow during 15 seconds !"
+     - "/effect give %player% minecraft:slowness 15 3"
+
+  epicanvil:
+    name: "&6&lEPICANVIL"
+    lore: 
+     - "&e&lCLICKKKK"
+     - "&a&lAND all your enemies in distance"
+     - "&a&lwill be slowed down for 15 seconds"
+    material: ANVIL
+    glow: true
+    cooldown: 10
+    click: all
+    sneaking: false
+    commands:
+     - "SENDMESSAGE &e&l[ExecutableItems] &6All your enemies are slow for 15 seconds !"
+     - "AROUND distance:'50' msgPlayerAffected:'true' command:'/effect give %target% minecraft:slowness 15 3'"
+     - "AROUND distance:'50' msgPlayerAffected:'false' command:'SENDMESSAGE &6&lUnlucky &eThe player &a%player% &ehave slow you with the item &a%item%'"
+
+  money:
+    name: "&e&l5000$"
+    lore: 
+     - "&6&lClick"
+     - "&7&lto receive 5000$"
+    material: PLAYER_HEAD-eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMTk4ZGY0MmY0NzdmMjEzZmY1ZTlkN2ZhNWE0Y2M0YTY5ZjIwZDljZWYyYjkwYzRhZTRmMjliZDE3Mjg3YjUifX19
+    glow: true
+    cooldown: 5
+    click: all
+    sneaking: true
+    commands:
+     - "/eco give %player% 5000"
+     - "SENDMESSAGE &a&l[ExecutableItems] &e%player% you have receive &a5000$"
+

@@ -49,10 +49,10 @@ public class ExecutableItems extends JavaPlugin {
         ActionbarHandler.getInstance().setup(this);
         ConfigGUIManager.getInstance().setup(this);
         Database.getInstance().setup(this);
-        if(Bukkit.getPluginManager().getPlugin("PlayerPoints")!=null) {
+        /*if(Bukkit.getPluginManager().getPlugin("PlayerPoints")!=null) {
             System.out.println("[ExecutableItems] PlayerPoints hooked !");
             PlayerPointsC.getInstance().setup(this);
-        }
+        }*/
 		/*if(Bukkit.getPluginManager().getPlugin("Vault")!=null) {
 			System.out.println("[ExecutableItems] Vault hooked !");
 			VaultC.getInstance().setup(this);

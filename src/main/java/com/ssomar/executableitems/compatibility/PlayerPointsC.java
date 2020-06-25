@@ -1,4 +1,4 @@
-package com.ssomar.executableitems.compatibility;
+/*package com.ssomar.executableitems.compatibility;
 
 import org.black_ixx.playerpoints.PlayerPoints;
 import org.bukkit.entity.Player;
@@ -34,3 +34,4 @@ public class PlayerPointsC {
 		return instance;
 	}
 }
+*/

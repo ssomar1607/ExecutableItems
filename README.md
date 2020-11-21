@@ -13,3 +13,9 @@ The typical command used to build ExecutableItems is: clean package install
 * Required Libraries:
   - Spigot
   - BStats
+  
+* Plugins supported
+ - PlaceholderAPI
+ - WorldGuard
+ - Vault
+ - 

@@ -15,6 +15,6 @@ The typical command used to build ExecutableItems is: clean package install
   - BStats
   
 * Plugins supported
- - PlaceholderAPI
- - WorldGuard
- - Vault
+  - PlaceholderAPI
+  - WorldGuard
+  - Vault

@@ -18,4 +18,3 @@ The typical command used to build ExecutableItems is: clean package install
  - PlaceholderAPI
  - WorldGuard
  - Vault
- - 
